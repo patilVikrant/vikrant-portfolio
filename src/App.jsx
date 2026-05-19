@@ -1,7 +1,7 @@
 function App() {
   const projects = [
     {
-      title: "bookCart E-Commerce App",
+      title: "BookCart E-Commerce App",
       desc: "A fullstack e-commerce application with product listing, cart, wishlist and order management.",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       codeUrl: "https://github.com/patilVikrant/bookCart-ecommerceApp-frontend",
@@ -9,7 +9,7 @@ function App() {
       image: "https://i.ibb.co/KjYKFpkW/book-Cart-img.png",
     },
     {
-      title: "axentra CRM App",
+      title: "Axentra CRM App",
       desc: "A fullstack crm application with lead and sales agent management with interactive analytics.",
       tech: ["React", "Node.js", "MongoDB", "Chart.js"],
       codeUrl: "https://github.com/patilVikrant/axentra-crmApp-frontend",
@@ -120,47 +120,56 @@ function App() {
         <div className="container py-3">
           <div className="text-center mb-5">
             <p className="text-primary fw-bold">PROJECTS</p>
-            <h2 className="fw-bold">My Projects</h2>
+            <h2 className="fw-bold display-5">My Projects</h2>
           </div>
 
           <div className="row g-4">
             {projects.map((project) => (
               <div className="col-md-6 col-lg-4" key={project.title}>
-                <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                <div className="card border-0 shadow-lg rounded-4 overflow-hidden h-100">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="card-img-top"
-                    style={{ height: "220px", objectFit: "cover" }}
+                    style={{
+                      height: "240px",
+                      objectFit: "cover",
+                      objectPosition: "top left",
+                      width: "100%",
+                    }}
                   />
 
-                  <div className="card-body p-4 d-flex flex-column">
-                    <h4 className="fw-bold">{project.title}</h4>
+                  <div className="card-body p-3 d-flex flex-column">
+                    <h4 className="fw-bold mb-3">{project.title}</h4>
 
-                    <p className="text-secondary flex-grow-1">{project.desc}</p>
+                    <p className="text-secondary flex-grow-1 mb-4">
+                      {project.desc}
+                    </p>
 
                     <div className="d-flex flex-wrap gap-2 mb-4">
                       {project.tech.map((item) => (
                         <span
                           key={item}
-                          className="bg-primary-subtle text-primary px-3 py-2 fw-semibold rounded-2"
+                          className="bg-primary-subtle text-primary px-3 py-2 fw-semibold rounded-3 small"
                         >
                           {item}
                         </span>
                       ))}
                     </div>
 
-                    <div className="d-flex gap-3">
+                    <div className="d-flex gap-3 mt-auto">
                       <a
                         href={project.demoUrl}
-                        className="btn btn-outline-primary"
+                        target="_blank"
+                        className="btn btn-primary fw-semibold"
                       >
                         Live Demo
                       </a>
 
                       <a
                         href={project.codeUrl}
-                        className="btn btn-outline-dark"
+                        target="_blank"
+                        className="btn btn-outline-dark fw-semibold"
                       >
                         GitHub
                       </a>
