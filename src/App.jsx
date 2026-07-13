@@ -121,9 +121,9 @@ function App() {
               <p className="hero-role">Full Stack Developer — MERN</p>
 
               <p className="hero-pitch">
-                Full-stack developer building production-grade web applications
-                with React, Node.js and MongoDB — with an engineering background
-                that shows up in how I structure and ship things.
+                Full-stack developer building complete web applications with
+                React, Node.js, and MongoDB — from RESTful APIs, database
+                modeling and authentication to a polished, responsive frontend.
               </p>
 
               <div className="d-flex gap-3 flex-wrap mt-4">
