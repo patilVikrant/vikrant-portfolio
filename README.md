@@ -1,16 +1,48 @@
-# React + Vite
+# Vikrant Patil — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site showcasing my full-stack MERN projects, skills, and contact info.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
 
-## React Compiler
+🌐 [vikrant-portfolio-sepia.vercel.app](https://vikrant-portfolio-sepia.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/patilVikrant/vikrant-portfolio.git
+cd vikrant-portfolio
+npm install
+npm run dev
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology      | Purpose                                  |
+| --------------- | ---------------------------------------- |
+| React + Vite    | Frontend framework                       |
+| Bootstrap       | Layout and base styling                  |
+| Custom CSS      | Design system (typography, color tokens) |
+| Bootstrap Icons | Contact section icons                    |
+
+---
+
+## ✨ Sections
+
+- **Home** — intro, role, and resume/projects CTAs
+- **Projects** — TaskForge, Axentra CRM, BookCart with live demo and GitHub links
+- **Skills** — categorized by Frontend, Backend, Database, and Tools
+- **Contact** — email, LinkedIn, GitHub
+
+---
+
+## 📫 Contact
+
+- **Email**: pvikrant248@gmail.com
+- **LinkedIn**: [in/vikrant-patil](https://www.linkedin.com/in/vikrant-patil-4aa26011b/)
+- **GitHub**: [patilVikrant](https://github.com/patilVikrant)

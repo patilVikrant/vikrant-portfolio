@@ -1,42 +1,69 @@
+import "./App.css";
+
 function App() {
   const projects = [
     {
+      title: "TaskForge",
+      status: "Deployed",
+      desc: "A fullstack task and project management app with JWT authentication, protected routes, team-based organization, and Chart.js reports.",
+      tech: ["React", "Vite", "JWT Auth", "Node.js", "Express", "MongoDB"],
+      codeUrl: "https://github.com/patilVikrant/taskForge",
+      demoUrl: "https://task-forge-fawn.vercel.app/login",
+      image: "https://i.ibb.co/6JqZTKCq/task-Forge-Home-Page.png",
+    },
+    {
+      title: "Axentra CRM App",
+      status: "Deployed",
+      desc: "A fullstack CRM application with lead and sales agent management with interactive analytics.",
+      tech: ["React", "Node.js", "MongoDB", "Chart.js"],
+      codeUrl: "https://github.com/patilVikrant/axentra-crmApp-frontend",
+      demoUrl: "https://axentra-crm-app-frontend.vercel.app/",
+      image: "https://i.ibb.co/mVp5kz3b/axentra-img.png",
+    },
+    {
       title: "BookCart E-Commerce App",
+      status: "Deployed",
       desc: "A fullstack e-commerce application with product listing, cart, wishlist and order management.",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       codeUrl: "https://github.com/patilVikrant/bookCart-ecommerceApp-frontend",
       demoUrl: "https://book-cart-ecommerce-app-frontend.vercel.app/",
       image: "https://i.ibb.co/KjYKFpkW/book-Cart-img.png",
     },
+  ];
+
+  const skillGroups = [
     {
-      title: "Axentra CRM App",
-      desc: "A fullstack crm application with lead and sales agent management with interactive analytics.",
-      tech: ["React", "Node.js", "MongoDB", "Chart.js"],
-      codeUrl: "https://github.com/patilVikrant/axentra-crmApp-frontend",
-      demoUrl: "https://axentra-crm-app-frontend.vercel.app/",
-      image: "https://i.ibb.co/mVp5kz3b/axentra-img.png",
+      label: "Frontend",
+      items: [
+        "React",
+        "React Router DOM",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "Chart.js",
+      ],
+    },
+    {
+      label: "Backend",
+      items: ["Node.js", "Express", "JWT-based Authentication", "REST APIs"],
+    },
+    {
+      label: "Database",
+      items: ["MongoDB", "Mongoose"],
+    },
+    {
+      label: "Tools",
+      items: ["Git", "GitHub", "Postman", "Vercel"],
     },
   ];
 
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Mongoose",
-    "Bootstrap",
-    "Chart.js",
-    "Vercel",
-  ];
   return (
-    <div className="bg-body-tertiary">
+    <div className="bp-page">
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+      <nav className="navbar navbar-expand-lg navbar-blueprint sticky-top py-2">
         <div className="container">
-          <a className="navbar-brand fw-semibold fs-3" href="#home">
+          <a className="navbar-brand" href="#home">
             Vikrant Patil
           </a>
           <button
@@ -74,7 +101,8 @@ function App() {
               <a
                 href="https://jsdeepdive.hashnode.dev/"
                 target="_blank"
-                className="btn btn-primary px-4 rounded-3"
+                rel="noreferrer"
+                className="btn btn-blueprint-amber px-3 py-2 ms-lg-2"
               >
                 Blog
               </a>
@@ -82,96 +110,96 @@ function App() {
           </div>
         </div>
       </nav>
-      {/* main section */}
-      <section id="home" className="py-3 bg-light">
-        <div className="container py-3">
+
+      {/* hero */}
+      <section id="home" className="hero-blueprint position-relative">
+        <div className="container py-5">
           <div className="row align-items-center">
-            <div className="col-lg-6">
-              <p className="text-primary fw-semibold fs-4">Hi, I'm</p>
+            <div className="col-lg-7">
+              <p className="hero-hi">Hi, I&apos;m</p>
+              <h1 className="hero-name">Vikrant Patil</h1>
+              <p className="hero-role">Full Stack Developer — MERN</p>
 
-              <h1 className="fw-semibold mb-3">Vikrant Patil</h1>
-
-              <h2 className="text-primary mb-4">Full Stack Developer</h2>
-
-              <p className="lead text-secondary mb-4">
-                Passionate full-stack developer building modern and responsive
-                web applications with React, Node.js and MongoDB.
+              <p className="hero-pitch">
+                Full-stack developer building production-grade web applications
+                with React, Node.js and MongoDB — with an engineering background
+                that shows up in how I structure and ship things.
               </p>
 
-              <div className="d-flex gap-3 flex-wrap mb-4">
-                <a href="#contact" className="btn btn-primary px-4">
-                  Contact Me
+              <div className="d-flex gap-3 flex-wrap mt-4">
+                <a
+                  href="#projects"
+                  className="btn btn-blueprint-amber px-4 py-2"
+                >
+                  View Projects
                 </a>
-
                 <a
                   href="https://drive.google.com/file/d/1rgGUS1GF4IGVzop99l4j6OlScwJoeSZ1/view?usp=sharing"
                   target="_blank"
-                  className="btn btn-outline-dark px-4"
+                  rel="noreferrer"
+                  className="btn btn-outline-blueprint-light px-4 py-2"
                 >
-                  Resume
+                  RESUME
                 </a>
               </div>
+
+              <p className="stack-strip mt-5">
+                React · Node.js · Express · MongoDB · JWT Auth
+              </p>
             </div>
           </div>
         </div>
       </section>
-      {/* projects section */}
-      <section id="projects" className="py-3 bg-light">
-        <div className="container py-3">
-          <div className="text-center mb-5">
-            <p className="text-primary fw-bold">PROJECTS</p>
-            <h2 className="fw-bold display-5">My Projects</h2>
-          </div>
+
+      {/* projects */}
+      <section id="projects" className="section-paper">
+        <div className="container">
+          <h2 className="section-title mb-5">Projects</h2>
 
           <div className="row g-4">
             {projects.map((project) => (
               <div className="col-md-6 col-lg-4" key={project.title}>
-                <div className="card border-0 shadow-lg rounded-4 overflow-hidden h-100">
+                <div className="spec-card h-100 d-flex flex-column">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="card-img-top"
-                    style={{
-                      height: "240px",
-                      objectFit: "cover",
-                      objectPosition: "top left",
-                      width: "100%",
-                    }}
+                    className="spec-card-img"
                   />
 
-                  <div className="card-body p-3 d-flex flex-column">
-                    <h4 className="fw-bold mb-3">{project.title}</h4>
-
-                    <p className="text-secondary flex-grow-1 mb-4">
-                      {project.desc}
+                  <div className="p-3 d-flex flex-column flex-grow-1">
+                    <p className="spec-status mb-2">
+                      <span className="dot" />
+                      Status: {project.status}
                     </p>
 
-                    <div className="d-flex flex-wrap gap-2 mb-4">
+                    <h4 className="spec-title mb-2">{project.title}</h4>
+
+                    <p className="spec-desc mb-3">{project.desc}</p>
+
+                    <div className="d-flex flex-wrap gap-2 mb-3">
                       {project.tech.map((item) => (
-                        <span
-                          key={item}
-                          className="bg-primary-subtle text-primary px-3 py-2 fw-semibold rounded-3 small"
-                        >
+                        <span key={item} className="tech-tag">
                           {item}
                         </span>
                       ))}
                     </div>
 
-                    <div className="d-flex gap-3 mt-auto">
+                    <div className="d-flex gap-2 mt-auto">
                       <a
                         href={project.demoUrl}
                         target="_blank"
-                        className="btn btn-primary fw-semibold"
+                        rel="noreferrer"
+                        className="btn btn-blueprint-amber btn-sm flex-grow-1"
                       >
                         Live Demo
                       </a>
-
                       <a
                         href={project.codeUrl}
                         target="_blank"
-                        className="btn btn-outline-dark fw-semibold"
+                        rel="noreferrer"
+                        className="btn btn-outline-blueprint btn-sm flex-grow-1"
                       >
-                        GitHub
+                        Code
                       </a>
                     </div>
                   </div>
@@ -182,88 +210,74 @@ function App() {
         </div>
       </section>
 
-      {/* skills section */}
-      <section id="skills" className="py-3">
-        <div className="container py-3 text-center">
-          <p className="text-primary fw-bold">SKILLS</p>
-          <h2 className="display-5 fw-bold mb-5">My Skills</h2>
+      {/* skills */}
+      <section id="skills" className="section-paper-alt">
+        <div className="container">
+          <h2 className="section-title mb-5">Skills</h2>
 
-          <div className="d-flex flex-wrap justify-content-center gap-3">
-            {skills.map((skill) => (
-              <div
-                key={skill}
-                className="bg-white fw-semibold shadow-sm rounded-pill px-4 py-3"
-              >
-                {skill}
+          {skillGroups.map((group) => (
+            <div className="skills-row row align-items-start" key={group.label}>
+              <div className="col-sm-3 col-lg-2">
+                <p className="skills-label mb-2 mb-sm-0">{group.label}</p>
               </div>
-            ))}
-          </div>
+              <div className="col-sm-9 col-lg-10">
+                <div className="d-flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span key={item} className="tech-tag">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* contact me section */}
-      <section id="contact" className="py-3 bg-light">
-        <div className="container py-3">
-          <div className="text-center mb-5">
-            <p className="text-primary fw-bold">CONTACT</p>
-            <h2 className="display-5 fw-bold">Contact Me</h2>
-            <p className="text-secondary mt-3">
-              Feel free to reach out for collaborations or opportunities.
-            </p>
-          </div>
+      {/* contact */}
+      <section id="contact" className="section-blueprint-dark">
+        <div className="container">
+          <h2 className="section-title-light mb-2">
+            Let&apos;s build something
+          </h2>
+          <p className="hero-pitch mb-5">
+            Open to full-stack developer roles. Reach out through any of these.
+          </p>
+
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="bg-white shadow-sm rounded-4 p-4 h-100 text-center">
-                <i
-                  className="bi bi-envelope-fill mb-3 fs-1"
-                  style={{ color: "#EA4335" }}
-                ></i>
-
-                <h4>Email</h4>
-
-                <a
-                  href="mailto:pvikrant248@gmail.com"
-                  className="text-decoration-none text-secondary"
-                >
-                  pvikrant248@gmail.com
-                </a>
-              </div>
+              <a
+                href="mailto:pvikrant248@gmail.com"
+                className="contact-card d-block text-decoration-none"
+              >
+                <i className="bi bi-envelope-fill contact-icon"></i>
+                <h4 className="contact-title">Email</h4>
+                <p className="contact-value">pvikrant248@gmail.com</p>
+              </a>
             </div>
             <div className="col-md-4">
-              <div className="bg-white shadow-sm rounded-4 p-4 h-100 text-center">
-                <i
-                  className="bi bi-linkedin mb-3 fs-1"
-                  style={{ color: "#0A66C2" }}
-                ></i>
-
-                <h4>LinkedIn</h4>
-
-                <a
-                  href="https://www.linkedin.com/in/vikrant-patil-4aa26011b/"
-                  target="_blank"
-                  className="text-decoration-none text-secondary"
-                >
-                  linkedin.com/in/vikrantpatil
-                </a>
-              </div>
+              <a
+                href="https://www.linkedin.com/in/vikrant-patil-4aa26011b/"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-card d-block text-decoration-none"
+              >
+                <i className="bi bi-linkedin contact-icon"></i>
+                <h4 className="contact-title">LinkedIn</h4>
+                <p className="contact-value">in/vikrant-patil</p>
+              </a>
             </div>
             <div className="col-md-4">
-              <div className="bg-white shadow-sm rounded-4 p-4 h-100 text-center">
-                <i
-                  className="bi bi-github mb-3 fs-1"
-                  style={{ color: "#171515" }}
-                ></i>
-
-                <h4>GitHub</h4>
-
-                <a
-                  href="https://github.com/patilVikrant"
-                  target="_blank"
-                  className="text-decoration-none text-secondary"
-                >
-                  github.com/patilVikrant
-                </a>
-              </div>
+              <a
+                href="https://github.com/patilVikrant"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-card d-block text-decoration-none"
+              >
+                <i className="bi bi-github contact-icon"></i>
+                <h4 className="contact-title">GitHub</h4>
+                <p className="contact-value">patilVikrant</p>
+              </a>
             </div>
           </div>
         </div>
