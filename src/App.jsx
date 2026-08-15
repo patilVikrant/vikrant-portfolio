@@ -3,6 +3,15 @@ import "./App.css";
 function App() {
   const projects = [
     {
+      title: "Chatly",
+      status: "Deployed",
+      desc: "A fullstack real-time chat app with JWT auth, 1-to-1 messaging via Socket.io, typing indicators, read receipts, and online status.",
+      tech: ["React", "Socket.io", "JWT Auth", "Node.js", "Express", "MongoDB"],
+      codeUrl: "https://github.com/patilVikrant/chatly",
+      demoUrl: "https://chatly-kappa-sand.vercel.app/",
+      image: "https://i.ibb.co/h1srNC2C/chat-App-screenshot.png",
+    },
+    {
       title: "TaskForge",
       status: "Deployed",
       desc: "A fullstack task and project management app with JWT authentication, protected routes, team-based organization, and Chart.js reports.",
@@ -46,7 +55,13 @@ function App() {
     },
     {
       label: "Backend",
-      items: ["Node.js", "Express", "JWT-based Authentication", "REST APIs"],
+      items: [
+        "Node.js",
+        "Express",
+        "Socket.io",
+        "JWT-based Authentication",
+        "REST APIs",
+      ],
     },
     {
       label: "Database",
@@ -54,7 +69,7 @@ function App() {
     },
     {
       label: "Tools",
-      items: ["Git", "GitHub", "Postman", "Vercel"],
+      items: ["Git", "GitHub", "Postman", "Vercel", "Render"],
     },
   ];
 
@@ -118,11 +133,11 @@ function App() {
             <div className="col-lg-7">
               <p className="hero-hi">Hi, I&apos;m</p>
               <h1 className="hero-name">Vikrant Patil</h1>
-              <p className="hero-role">Full Stack Developer — MERN</p>
+              <p className="hero-role">Full Stack Developer - MERN</p>
 
               <p className="hero-pitch">
                 Full-stack developer building complete web applications with
-                React, Node.js, and MongoDB — from RESTful APIs, database
+                React, Node.js, and MongoDB - from RESTful APIs, database
                 modeling and authentication to a polished, responsive frontend.
               </p>
 
@@ -144,7 +159,7 @@ function App() {
               </div>
 
               <p className="stack-strip mt-5">
-                React · Node.js · Express · MongoDB · JWT Auth
+                React · Node.js · Express · MongoDB · Socket.io · JWT Auth
               </p>
             </div>
           </div>

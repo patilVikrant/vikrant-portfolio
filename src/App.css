@@ -267,6 +267,7 @@ body {
   font-size: 0.85rem;
   margin: 0;
 }
+
 @media (max-width: 576px) {
   .hero-name {
     font-size: 2.2rem;
